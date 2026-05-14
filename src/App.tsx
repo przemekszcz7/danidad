@@ -11,7 +11,6 @@ import {
   Mail, 
   Clock, 
   Star, 
-  Instagram,
   Anchor,
   Sun,
   Waves
@@ -317,9 +316,6 @@ export default function App() {
           <div className="flex gap-6">
             <a href="https://www.facebook.com/DanielPawliszcze" className="hover:text-ocean transition-colors">
               <Facebook size={28} />
-            </a>
-            <a href="#" className="hover:text-ocean transition-colors">
-              <Instagram size={28} />
             </a>
             <a href="mailto:dandad2023@hotmail.com" className="hover:text-ocean transition-colors">
               <Mail size={28} />
