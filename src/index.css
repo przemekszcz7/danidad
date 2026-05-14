@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Lobster Two", cursive;
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg: #FDF6E3;
+  --color-bg-section: #FFF8F0;
+  --color-ocean: #2E86AB;
+  --color-ocean-light: #7EC8D8;
+  --color-sand: #E8C97A;
+  --color-waffle: #C96A1F;
+  --color-waffle-light: #F5B97A;
+  --color-green: #4E9B6F;
+  --color-text: #1E1A14;
+  --color-text-muted: #7A6F5E;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-display tracking-tight text-waffle;
+  }
+}
+
+@layer components {
+  .wave-divider {
+    @apply relative w-full leading-[0];
+  }
+
+  .wave-divider svg {
+    @apply relative block w-full h-[50px] md:h-[100px];
+  }
+
+  .wood-texture {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(30, 26, 20, 0.05),
+      rgba(30, 26, 20, 0.05) 2px,
+      transparent 2px,
+      transparent 40px
+    );
+  }
+
+  .confetti-bg {
+    background-image: radial-gradient(var(--color-sand) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .waffle-card {
+    @apply bg-white rounded-[20px] shadow-sm border-t-4 border-waffle p-6 transition-all duration-300 hover:shadow-md;
+  }
+
+  .ocean-card {
+    @apply bg-white rounded-[20px] shadow-sm border-t-4 border-ocean p-6 transition-all duration-300 hover:shadow-md;
+  }
+}
+
+/* Custom scrollbar to match sea theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ocean-light rounded-full border-2 border-bg-section;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ocean;
+}

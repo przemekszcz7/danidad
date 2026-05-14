@@ -1,0 +1,8 @@
+{
+  "name": "Gofrownia Dan & Dad Dźwirzyno",
+  "description": "Wypiekamy gofry od 1984 roku według oryginalnej receptury z naturalnych składników. Zapraszamy do Dźwirzyna na najsmaczniejsze gofry nad polskim morzem!",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
